@@ -1,5 +1,120 @@
- <title>My GitHub Page</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lời chúc đặc biệt</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(circle, #ff7eb3, #ff758c, #ff6163);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
 
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
 
-    <h1>Welcome to my GitHub Page!</h1>
-    <p>This is my first website using GitHub Pages.</p>
+        .message {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 0, 128, 0.8);
+            margin: 0 20px;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+
+        .fireworks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+            animation: fall 3s linear infinite;
+        }
+
+        /* Tạo nhiều pháo hoa rơi */
+        @keyframes fall {
+            0% {
+                transform: translateY(-50px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh);
+                opacity: 0;
+            }
+        }
+
+        /* Hiệu ứng xuất hiện chữ */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Tạo nhiều pháo hoa ngẫu nhiên */
+        .firework:nth-child(1) {
+            left: 10%;
+            animation-delay: 0.5s;
+        }
+
+        .firework:nth-child(2) {
+            left: 30%;
+            animation-delay: 1s;
+        }
+
+        .firework:nth-child(3) {
+            left: 50%;
+            animation-delay: 1.5s;
+        }
+
+        .firework:nth-child(4) {
+            left: 70%;
+            animation-delay: 0.7s;
+        }
+
+        .firework:nth-child(5) {
+            left: 90%;
+            animation-delay: 1.2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="fireworks">
+            <div class="firework"></div>
+            <div class="firework"></div>
+            <div class="firework"></div>
+            <div class="firework"></div>
+            <div class="firework"></div>
+        </div>
+        <p class="message">
+            Chúc Bạn - Nữ thần xinh gái,<br>
+            Cuối tuần tràn đầy niềm vui và hạnh phúc! ❤️✨🌸
+        </p>
+    </div>
+</body>
+</html>
